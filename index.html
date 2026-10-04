@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reed Bellows</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="./">REED BELLOWS</a>
+      <nav aria-label="Pages">
+        <a href="./" aria-current="page">Home</a>
+        <a href="background.html">Background</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="interests.html">Interests</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <p class="label">Cornell University · Class of 2030</p>
+          <h1>Reed<br>Bellows<span>.</span></h1>
+          <p class="lede">Freshman studying Biometry &amp; Statistics. Hooper, angler, and lifelong Bengals fan.</p>
+        </div>
+      </div>
+
+      <div class="strip" aria-label="Quick facts">
+        <div><span class="label">Major</span><strong>BTRY</strong></div>
+        <div><span class="label">Year</span><strong>Freshman</strong></div>
+        <div><span class="label">Hometown</span><strong>San Diego, CA</strong></div>
+        <div><span class="label">Team</span><strong>CIN</strong></div>
+      </div>
+
+      <nav class="sections" aria-label="Explore">
+        <a href="background.html"><span class="go">Open →</span><h2>Background</h2><p>Who I am, where I’m from, and my family.</p></a>
+        <a href="experience.html"><span class="go">Open →</span><h2>Experience</h2><p>School, work and organizations.</p></a>
+        <a href="projects.html"><span class="go">Open →</span><h2>Projects</h2><p>Case studies from my internships.</p></a>
+        <a href="skills.html"><span class="go">Open →</span><h2>Skills</h2><p>R, statistics, finance and leadership.</p></a>
+        <a href="interests.html"><span class="go">Open →</span><h2>Interests</h2><p>Club basketball, fishing, football and reading.</p></a>
+      </nav>
+
+      <section class="bengals home-bengals" aria-label="Cincinnati Bengals">
+        <div class="b-top">
+          <div>
+            <p class="label">Cincinnati Bengals · 2026 season</p>
+            <h2>Who Dey.</h2>
+          </div>
+          <div class="record">
+            <span class="label">Record</span>
+            <strong id="record">2–2</strong>
+            <span class="fine">2nd, AFC North · as of Oct 4</span>
+          </div>
+        </div>
+
+        <div class="next">
+          <span class="label" id="next-label">Next game</span>
+          <p class="matchup" id="next-matchup">Week 5 · at Miami Dolphins</p>
+          <p class="fine" id="next-when">Sun, Oct 11 · 1:00 PM ET</p>
+          <div class="clock" id="clock" aria-live="off">
+            <div><b id="cd-d">–</b><span>Days</span></div>
+            <div><b id="cd-h">–</b><span>Hours</span></div>
+            <div><b id="cd-m">–</b><span>Min</span></div>
+            <div><b id="cd-s">–</b><span>Sec</span></div>
+          </div>
+        </div>
+
+        <div class="next">
+          <span class="label">Results so far</span>
+          <ul class="results">
+            <li class="w"><b>W</b> 33–27 vs Buccaneers</li>
+            <li class="w"><b>W</b> 20–6 at Texans</li>
+            <li><b>L</b> 27–30 at Steelers</li>
+            <li><b>L</b> 17–22 vs Jaguars</li>
+          </ul>
+          <p class="fine">Kickoff times after Week 5 can change with NFL flexible scheduling.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="label">Reed Bellows · Cornell University · Ithaca, NY</span>
+      <a class="label" href="https://www.linkedin.com/in/reed-bellows/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var games = [
+        { wk: 5,  opp: "at Miami Dolphins",          t: "2026-10-11T13:00:00-04:00" },
+        { wk: 7,  opp: "at Baltimore Ravens",        t: "2026-10-25T13:00:00-04:00" },
+        { wk: 8,  opp: "vs Tennessee Titans",        t: "2026-11-01T13:00:00-05:00" },
+        { wk: 9,  opp: "vs Atlanta Falcons (Madrid)", t: "2026-11-08T09:30:00-05:00" },
+        { wk: 10, opp: "vs Pittsburgh Steelers",     t: "2026-11-15T20:20:00-05:00" },
+        { wk: 11, opp: "at Washington Commanders",   t: "2026-11-23T20:15:00-05:00" },
+        { wk: 12, opp: "vs New Orleans Saints",      t: "2026-11-29T13:00:00-05:00" },
+        { wk: 13, opp: "at Cleveland Browns",        t: "2026-12-06T13:00:00-05:00" },
+        { wk: 14, opp: "vs Kansas City Chiefs",      t: "2026-12-13T16:25:00-05:00" },
+        { wk: 15, opp: "at Carolina Panthers",       t: "2026-12-20T13:00:00-05:00" },
+        { wk: 17, opp: "vs Baltimore Ravens",        t: "2026-12-31T20:15:00-05:00" }
+      ];
+      var GAME_LENGTH = 3.5 * 3600 * 1000;
+      var $ = function (id) { return document.getElementById(id); };
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      var fmt = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/New_York" });
+
+      function tick() {
+        var now = Date.now();
+        var live = null, next = null;
+        for (var i = 0; i < games.length; i++) {
+          var k = Date.parse(games[i].t);
+          if (now >= k && now < k + GAME_LENGTH) { live = games[i]; break; }
+          if (k > now) { next = games[i]; break; }
+        }
+        if (live) {
+          $("next-label").textContent = "Game in progress";
+          $("next-matchup").textContent = "Week " + live.wk + " · " + live.opp;
+          $("next-when").textContent = "Kicked off " + fmt.format(new Date(live.t)) + " ET";
+          $("clock").hidden = true;
+          return;
+        }
+        if (!next) {
+          $("next-label").textContent = "Next game";
+          $("next-matchup").textContent = "Late-season schedule to be announced";
+          $("next-when").textContent = "Check back soon";
+          $("clock").hidden = true;
+          return;
+        }
+        $("clock").hidden = false;
+        $("next-label").textContent = "Next game";
+        $("next-matchup").textContent = "Week " + next.wk + " · " + next.opp;
+        $("next-when").textContent = fmt.format(new Date(next.t)) + " ET";
+        var ms = Date.parse(next.t) - now;
+        var s = Math.floor(ms / 1000);
+        $("cd-d").textContent = Math.floor(s / 86400);
+        $("cd-h").textContent = pad(Math.floor(s % 86400 / 3600));
+        $("cd-m").textContent = pad(Math.floor(s % 3600 / 60));
+        $("cd-s").textContent = pad(s % 60);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
