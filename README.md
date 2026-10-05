@@ -11,9 +11,10 @@ I'm Reed Bellows, a first-year student at Cornell studying Biometry and Statisti
 | [Home](index.html) | Introduction and links to every section |
 | [Background](background.html) | Who I am, where I'm from, and my family |
 | [Experience](experience.html) | School, work and organizations, as a clickable timeline |
-| [Projects](projects.html) | Internship case studies and personal coding projects |
+| [Projects](projects.html) | Personal coding projects |
 | [Skills](skills.html) | R, statistics, finance and leadership |
 | [Interests](interests.html) | Club basketball, fishing, football and reading |
+| [Contact](contact.html) | Email, LinkedIn and GitHub |
 
 ## How it's built
 
